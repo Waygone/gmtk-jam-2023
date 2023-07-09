@@ -59,9 +59,12 @@ public class Garbage : MonoBehaviour
             particles.Play();
             rb.velocity = Vector2.zero;
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
-            isOnFloor = true;
 
-            crashingSound.Play();
+            if (!isOnFloor)
+            {
+                isOnFloor = true;
+                crashingSound.Play();
+            }
         }
     }
 
