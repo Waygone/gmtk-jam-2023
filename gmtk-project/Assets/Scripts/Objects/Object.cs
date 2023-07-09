@@ -6,6 +6,9 @@ using UnityEngine;
 
 public class Object : MonoBehaviour
 {
+    public AudioSource beam;
+    bool isAttracted = false;
+
     public enum Objects
     {
         Car,
@@ -34,6 +37,11 @@ public class Object : MonoBehaviour
         if(timer <= 0.0f)
         {
             transform.position = Vector3.Lerp(transform.position,mainCharacter.transform.position, Time.deltaTime * speed);
+            if(!isAttracted )
+            {
+                isAttracted=true;
+                beam.Play();
+            }
         }
         else
             timer -= Time.deltaTime;

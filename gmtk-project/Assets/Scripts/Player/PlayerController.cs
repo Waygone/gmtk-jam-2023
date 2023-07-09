@@ -1,6 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
@@ -15,6 +16,7 @@ public class PlayerController : MonoBehaviour
 
     public TextMeshProUGUI toggleMusicText;
 
+    public AudioMixer audioMixer;
     public AudioSource deathSound;
     public AudioSource walkingSound;
     public AudioSource cleaningSound;
@@ -81,7 +83,8 @@ public class PlayerController : MonoBehaviour
         headphonesMusic.mute = true;
         cleaningSound.mute = true;
         walkingSound.mute = true;
-        
+        audioMixer.SetFloat("lowpassResonanceSFX", 0f);
+        audioMixer.SetFloat("lowpassSFX", 5000f);
     }
 
 
@@ -208,6 +211,9 @@ public class PlayerController : MonoBehaviour
             levelMusic.mute = headphonesOn;
             headphonesMusic.mute = !headphonesOn;
             toggleMusicText.text = headphonesOn ? "T - Headphones Off" : "T - Headphones On";
+
+            audioMixer.SetFloat("lowpassResonanceSFX", headphonesOn? 2.0f : 0f);
+            audioMixer.SetFloat("lowpassSFX", headphonesOn ? 1000.0f : 5000f);
         }
     }
     void GetMovement()

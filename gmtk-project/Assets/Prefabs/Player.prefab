@@ -698,6 +698,7 @@ MonoBehaviour:
   cleanedText: {fileID: 0}
   timerText: {fileID: 0}
   toggleMusicText: {fileID: 0}
+  audioMixer: {fileID: 24100000, guid: 0093ae7e397fc024495101a4959f9a2a, type: 2}
   deathSound: {fileID: 1815977346969335175}
   walkingSound: {fileID: 4709585223386846123}
   cleaningSound: {fileID: 2593785077400215755}
