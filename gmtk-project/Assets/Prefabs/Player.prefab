@@ -183,7 +183,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.35365656, y: -0.77143764}
+  m_Offset: {x: -0.28573397, y: -3.8551226}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -194,7 +194,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.54968745, y: 7.442709}
+  m_Size: {x: 1.1202376, y: 1.1123295}
   m_EdgeRadius: 0
 --- !u!1 &4403944950399082064
 GameObject:
@@ -591,7 +591,6 @@ GameObject:
   - component: {fileID: 5225555623726378781}
   - component: {fileID: 8783391178488427564}
   - component: {fileID: 9059018787291845099}
-  - component: {fileID: 6340313680084327555}
   - component: {fileID: 2626926036629421968}
   m_Layer: 6
   m_Name: Player
@@ -682,27 +681,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.18985605, y: -0.5695677}
   m_Size: {x: 2.8141794, y: 7.94882}
   m_Direction: 0
---- !u!95 &6340313680084327555
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7468826135998687273}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8382751c22fbc6945bc7819708488e1b, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &2626926036629421968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -718,6 +696,7 @@ MonoBehaviour:
   animator: {fileID: 2163366456898428622}
   cleanedText: {fileID: 0}
   timerText: {fileID: 0}
+  toggleMusicText: {fileID: 0}
   allObjectsInScene: {fileID: 0}
   levelMusic: {fileID: 0}
   headphonesMusic: {fileID: 0}
@@ -726,3 +705,4 @@ MonoBehaviour:
   limitMin: {fileID: 0}
   limitMax: {fileID: 0}
   itemsToClean: 10
+  levelTimer: 60

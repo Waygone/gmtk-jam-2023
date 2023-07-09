@@ -397,8 +397,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: E - Clean
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b6eac1ab861b4bc40b9fbd9e085bb98d, type: 2}
+  m_sharedMaterial: {fileID: -7833276125989142880, guid: b6eac1ab861b4bc40b9fbd9e085bb98d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -422,7 +422,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26.85
+  m_fontSize: 32.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1511,8 +1511,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: T - Headphones On
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b6eac1ab861b4bc40b9fbd9e085bb98d, type: 2}
+  m_sharedMaterial: {fileID: -7833276125989142880, guid: b6eac1ab861b4bc40b9fbd9e085bb98d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1536,7 +1536,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26.85
+  m_fontSize: 32.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2700,8 +2700,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Cleaned: x0'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b6eac1ab861b4bc40b9fbd9e085bb98d, type: 2}
+  m_sharedMaterial: {fileID: -7833276125989142880, guid: b6eac1ab861b4bc40b9fbd9e085bb98d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2725,7 +2725,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44.75
+  m_fontSize: 53.85
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3084,8 +3084,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 60.00s
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b6eac1ab861b4bc40b9fbd9e085bb98d, type: 2}
+  m_sharedMaterial: {fileID: -7833276125989142880, guid: b6eac1ab861b4bc40b9fbd9e085bb98d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3109,7 +3109,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44.75
+  m_fontSize: 53.85
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3889,6 +3889,10 @@ PrefabInstance:
       propertyPath: levelMusic
       value: 
       objectReference: {fileID: 636421711}
+    - target: {fileID: 2626926036629421968, guid: cf0d56284c34a08409e2de4b191380b9, type: 3}
+      propertyPath: levelTimer
+      value: 59
+      objectReference: {fileID: 0}
     - target: {fileID: 2626926036629421968, guid: cf0d56284c34a08409e2de4b191380b9, type: 3}
       propertyPath: cleanedText
       value: 

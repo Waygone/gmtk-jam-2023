@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
     public int itemsToClean = 10;
     int itemsCleaned = 0;
 
-    float levelTimer = 60f;
+    public float levelTimer = 60f;
     bool timerRunning = false;
     float cleaned = 0f;
     [NonSerialized] public bool isCleaning = false;
@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        //animator = GetComponentInChildren<Animator>();
+        animator = GetComponentInChildren<Animator>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         cleanTimer = cleanSpeed;
     }
@@ -105,8 +105,11 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("isCleaning", isCleaning);
         animator.SetBool("isMoving", isMoving);
 
-        if(horizontal != 0)
+        if (horizontal != 0)
+        {
             spriteRenderer.flipX = horizontal < 0;
+            Debug.Log(spriteRenderer.flipX);
+        }
     }
 
     #region Timers
@@ -115,7 +118,14 @@ public class PlayerController : MonoBehaviour
         if (timerRunning)
         {
             levelTimer -= Time.deltaTime;
-            timerText.text = TimeSpan.FromSeconds(levelTimer).ToString("ss\\.ff") + "s";
+            var minutes = levelTimer / 60;
+            var seconds = levelTimer % 60;
+            var fraction = levelTimer * 1000;
+            fraction = fraction % 1000;
+            if(levelTimer > 60) 
+                timerText.text = String.Format("{0:00}:{1:00}:{2:000}", minutes, seconds, fraction) + "s";
+            else
+                timerText.text = TimeSpan.FromSeconds(levelTimer).ToString("ss\\.ff") + "s";
             if (levelTimer <= 0.0f)
                 Die();
         }
@@ -171,7 +181,7 @@ public class PlayerController : MonoBehaviour
             isCleaning = true;
             startCleanTimer = true;
             canClean = false;
-            animator.SetBool("isCleaning", isCleaning);
+            //animator.SetBool("isCleaning", isCleaning);
         }
         if (Input.GetKeyDown(KeyCode.T))
         {
