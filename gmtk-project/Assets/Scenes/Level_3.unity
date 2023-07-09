@@ -1122,7 +1122,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1997902775417186943, guid: 878434ebd5812b24fa4ac6641c26c281, type: 3}
       propertyPath: timeRange
-      value: 40
+      value: 66
       objectReference: {fileID: 0}
     - target: {fileID: 4530117251736653572, guid: 878434ebd5812b24fa4ac6641c26c281, type: 3}
       propertyPath: m_SortingOrder
@@ -4037,7 +4037,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1997902775417186943, guid: fb8ec6c18e1a7e74290fdea481a172d9, type: 3}
       propertyPath: timeRange
-      value: 22
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 4530117251736653572, guid: fb8ec6c18e1a7e74290fdea481a172d9, type: 3}
       propertyPath: m_SortingOrder

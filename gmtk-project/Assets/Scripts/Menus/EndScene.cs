@@ -13,7 +13,7 @@ public class EndScene : MonoBehaviour
 
     void Start()
     {
-        score.text = "Total Score: " + (PlayerPrefs.GetFloat("Level_1")+ PlayerPrefs.GetFloat("Level_2")).ToString();
+        score.text = "Total Score: " + (PlayerPrefs.GetFloat("Level_1") + PlayerPrefs.GetFloat("Level_2") + PlayerPrefs.GetFloat("Level_3") + PlayerPrefs.GetFloat("Level_4")).ToString();
         itemsCleaned.text = "Total Items Cleaned: " + (PlayerPrefs.GetFloat("Level_2i") + PlayerPrefs.GetFloat("Level_1i")).ToString();
     }
 
