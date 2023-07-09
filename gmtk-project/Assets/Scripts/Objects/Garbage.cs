@@ -45,6 +45,8 @@ public class Garbage : MonoBehaviour
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
 
         player = GameObject.FindGameObjectWithTag("Player");
+
+        amount = UnityEngine.Random.Range(amount-(amount/2),amount+(amount*2));
     }
 
     private void FixedUpdate()

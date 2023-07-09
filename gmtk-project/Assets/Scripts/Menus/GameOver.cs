@@ -8,6 +8,7 @@ public class GameOver : MonoBehaviour
 {
     public TextMeshProUGUI currentLevel;
     public TextMeshProUGUI score;
+    public TextMeshProUGUI itemsCleaned;
     string currentLevelName;
 
 
@@ -15,7 +16,8 @@ public class GameOver : MonoBehaviour
     {
         currentLevelName = PlayerPrefs.GetString("CurrentLevel");
         currentLevel.text = currentLevelName.Replace("_", " ");
-        score.text = PlayerPrefs.GetFloat(currentLevelName).ToString();
+        score.text = "Score: " + PlayerPrefs.GetFloat(currentLevelName).ToString();
+        itemsCleaned.text = "Items Cleaned: " + PlayerPrefs.GetFloat(currentLevelName + "i").ToString();
     }
 
     public void Retry()

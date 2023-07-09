@@ -146,8 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textPopupPrefab: {fileID: 2266539841463819201, guid: 78331a9a7f4dca440b6a01feadc20372, type: 3}
-  amount: 100
-  timeRange: 1
+  amount: 80
   speed: 0.3
 --- !u!58 &908449570809387313
 CircleCollider2D:

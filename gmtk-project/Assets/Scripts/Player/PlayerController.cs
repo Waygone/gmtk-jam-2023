@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEditor.Animations;
@@ -9,34 +10,43 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    #region Components
     Rigidbody2D rb;
     public Animator animator;
     SpriteRenderer spriteRenderer;
+    
     public TextMeshProUGUI cleanedText;
-
-    float cleaned = 0f;
-
-    public float speed = 7.0f;
-    public float cleanSpeed = 2.0f;
-    public Transform limitMin, limitMax;
-
+    public TextMeshProUGUI timerText;
 
     public GameObject allObjectsInScene;
     public AudioSource levelMusic;
     public AudioSource headphonesMusic;
+    #endregion
 
+    #region Vars
+    public float speed = 7.0f;
+    public float cleanSpeed = 2.0f;
+    public Transform limitMin, limitMax;
 
-    [NonSerialized] public bool isCleaning = false;
+    float vertical;
+    float horizontal;
     bool isMoving = false;
+    #endregion
+
+    #region Level Vars
+    public int itemsToClean = 10;
+    int itemsCleaned = 0;
+    float levelTimer = 60f;
+    bool timerRunning = false;
+    float cleaned = 0f;
+    [NonSerialized] public bool isCleaning = false;
 
     bool canClean = false;
     bool startCleanTimer = false;
     float amountAddedToText = 0f;
     GameObject toClean;
     float cleanTimer;
-
-    float vertical;
-    float horizontal;
+    #endregion
 
     String currentLevel;
 
@@ -55,6 +65,10 @@ public class PlayerController : MonoBehaviour
         PlayerPrefs.SetString("CurrentLevel", SceneManager.GetActiveScene().name);
         currentLevel = PlayerPrefs.GetString("CurrentLevel");
         PlayerPrefs.SetFloat(currentLevel, cleaned);
+        PlayerPrefs.SetFloat(currentLevel+"i", 0);
+
+        timerRunning = true;
+        cleanedText.text = "Cleaned: 0/" + itemsToClean.ToString();
     }
 
 
@@ -63,6 +77,7 @@ public class PlayerController : MonoBehaviour
         GetInput();
         SetSprite();
         CleanTime();
+        RunTimer();
     }
 
     private void FixedUpdate()
@@ -89,6 +104,25 @@ public class PlayerController : MonoBehaviour
             spriteRenderer.flipX = horizontal < 0;
     }
 
+    #region Timers
+    void RunTimer()
+    {
+        if (timerRunning)
+        {
+            levelTimer -= Time.deltaTime;
+            timerText.text = TimeSpan.FromSeconds(levelTimer).ToString("ss\\.ff") + "s";
+            if (levelTimer <= 0.0f)
+                Die();
+        }
+    }
+
+
+    public void ChangeCanClean(bool c, GameObject tc, float amount)
+    {
+        canClean = c;
+        toClean = tc;
+        amountAddedToText = amount;
+    }
     void CleanTime()
     {
         if (startCleanTimer)
@@ -99,11 +133,14 @@ public class PlayerController : MonoBehaviour
                 startCleanTimer = false;
                 toClean.GetComponent<Garbage>().Clean();
                 cleanTimer = cleanSpeed;
+
+                itemsCleaned += 1;
                 
                 cleaned += amountAddedToText;
-                cleanedText.text = "Cleaned: x" + cleaned.ToString();
+                cleanedText.text = "Cleaned: " + itemsCleaned.ToString() + "/" + itemsToClean.ToString();
 
                 PlayerPrefs.SetFloat(currentLevel,cleaned);
+                PlayerPrefs.SetFloat(currentLevel+"i", itemsCleaned);
 
                 CheckIfFinished();
             }
@@ -113,12 +150,15 @@ public class PlayerController : MonoBehaviour
 
     private void CheckIfFinished()
     {
-        if (allObjectsInScene.transform.childCount <= 0)
+        if (allObjectsInScene.transform.childCount <= 0 || itemsCleaned >= itemsToClean)
         {
             SceneManager.LoadScene("WinScreen");
         }
     }
 
+    #endregion
+
+    #region Handlers
     void GetInput()
     {
         if (Input.GetKeyDown(KeyCode.E) && canClean)
@@ -147,13 +187,8 @@ public class PlayerController : MonoBehaviour
         //Change animations depending on movement
         isMoving = horizontal != 0 || vertical != 0;
     }
+    #endregion
 
-    public void ChangeCanClean(bool c, GameObject tc, float amount)
-    {
-        canClean = c;
-        toClean = tc;
-        amountAddedToText = amount;
-    }
 
     public void Die()
     {
