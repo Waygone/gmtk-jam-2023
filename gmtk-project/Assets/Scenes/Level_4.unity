@@ -1291,7 +1291,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.9999993, y: -22.35988, z: -19.4}
+  m_LocalPosition: {x: -2.9999995, y: -22.35988, z: -19.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3232,7 +3232,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1208332006}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.9999993, y: -22.35988, z: -19.4}
+  m_LocalPosition: {x: -2.9999995, y: -22.35988, z: -19.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5507,7 +5507,7 @@ PrefabInstance:
       objectReference: {fileID: 1487257278}
     - target: {fileID: 2626926036629421968, guid: cf0d56284c34a08409e2de4b191380b9, type: 3}
       propertyPath: cleanSpeed
-      value: 2
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 2626926036629421968, guid: cf0d56284c34a08409e2de4b191380b9, type: 3}
       propertyPath: levelMusic

@@ -80,7 +80,7 @@ public class Garbage : MonoBehaviour
         target = player.transform.position - transform.position;
         //Debug.Log("Player: " + target);
 
-        warningSound.pitch = UnityEngine.Random.Range(0.8f,1f);
+        warningSound.pitch = UnityEngine.Random.Range(0.95f,1.05f);
         warningSound.Play();
         rb.AddForce(Vector2.Distance(player.transform.position,transform.position) > 5f ? (target*speed) : (target * speed*2f), ForceMode2D.Impulse);
         //transform.Translate(playerPositionLaunch * sp);

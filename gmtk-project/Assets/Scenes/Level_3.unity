@@ -4415,7 +4415,7 @@ PrefabInstance:
       objectReference: {fileID: 1487257278}
     - target: {fileID: 2626926036629421968, guid: cf0d56284c34a08409e2de4b191380b9, type: 3}
       propertyPath: cleanSpeed
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2626926036629421968, guid: cf0d56284c34a08409e2de4b191380b9, type: 3}
       propertyPath: levelMusic

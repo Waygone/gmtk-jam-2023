@@ -3436,7 +3436,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1997902775417186943, guid: b94efe83ccbcf9b458fc8a19deecb4ac, type: 3}
       propertyPath: timeRange
-      value: 13
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4530117251736653572, guid: b94efe83ccbcf9b458fc8a19deecb4ac, type: 3}
       propertyPath: m_SortingOrder
@@ -3719,7 +3719,7 @@ PrefabInstance:
       objectReference: {fileID: 1487257278}
     - target: {fileID: 2626926036629421968, guid: cf0d56284c34a08409e2de4b191380b9, type: 3}
       propertyPath: cleanSpeed
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2626926036629421968, guid: cf0d56284c34a08409e2de4b191380b9, type: 3}
       propertyPath: levelMusic
