@@ -1,10 +1,5 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Reflection;
 using TMPro;
-using Unity.VisualScripting;
-using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -17,6 +12,8 @@ public class PlayerController : MonoBehaviour
     
     public TextMeshProUGUI cleanedText;
     public TextMeshProUGUI timerText;
+
+    public TextMeshProUGUI toggleMusicText;
 
     public GameObject allObjectsInScene;
     public AudioSource levelMusic;
@@ -34,8 +31,12 @@ public class PlayerController : MonoBehaviour
     #endregion
 
     #region Level Vars
+
+    bool headphonesOn = false;
+
     public int itemsToClean = 10;
     int itemsCleaned = 0;
+
     float levelTimer = 60f;
     bool timerRunning = false;
     float cleaned = 0f;
@@ -43,9 +44,11 @@ public class PlayerController : MonoBehaviour
 
     bool canClean = false;
     bool startCleanTimer = false;
+    float cleanTimer;
+    
     float amountAddedToText = 0f;
     GameObject toClean;
-    float cleanTimer;
+
     #endregion
 
     String currentLevel;
@@ -69,6 +72,8 @@ public class PlayerController : MonoBehaviour
 
         timerRunning = true;
         cleanedText.text = "Cleaned: 0/" + itemsToClean.ToString();
+
+        headphonesMusic.mute = true;
     }
 
 
@@ -163,11 +168,17 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && canClean)
         {
-            Debug.Log("cleaned");
             isCleaning = true;
             startCleanTimer = true;
             canClean = false;
             animator.SetBool("isCleaning", isCleaning);
+        }
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            headphonesOn = !headphonesOn;
+            levelMusic.mute = headphonesOn;
+            headphonesMusic.mute = !headphonesOn;
+            toggleMusicText.text = headphonesOn ? "T - Headphones Off" : "T - Headphones On";
         }
     }
     void GetMovement()

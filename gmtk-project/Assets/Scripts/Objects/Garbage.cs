@@ -11,6 +11,8 @@ public class Garbage : MonoBehaviour
     public GameObject textPopupPrefab;
     public int amount = 100;
     public float speed = 0.8f;
+    public AudioSource warningSound;
+    public AudioSource crashingSound;
 
     Target indicator;
     GameObject bottomLimit;
@@ -58,6 +60,8 @@ public class Garbage : MonoBehaviour
             rb.velocity = Vector2.zero;
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
             isOnFloor = true;
+
+            //crashingSound.Play();
         }
     }
 
@@ -73,6 +77,7 @@ public class Garbage : MonoBehaviour
         target = player.transform.position - transform.position;
         //Debug.Log("Player: " + target);
 
+        //warningSound.Play();
         rb.AddForce(target * speed, ForceMode2D.Impulse);
         //transform.Translate(playerPositionLaunch * sp);
     }

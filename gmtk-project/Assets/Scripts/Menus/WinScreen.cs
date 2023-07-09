@@ -8,6 +8,7 @@ public class WinScreen : MonoBehaviour
 {
     public TextMeshProUGUI currentLevel;
     public TextMeshProUGUI score;
+    public TextMeshProUGUI itemsCleaned;
     string currentLevelName;
 
 
@@ -16,18 +17,16 @@ public class WinScreen : MonoBehaviour
         currentLevelName = PlayerPrefs.GetString("CurrentLevel");
         currentLevel.text = currentLevelName.Replace("_", " ");
         score.text = PlayerPrefs.GetFloat(currentLevelName).ToString();
+        itemsCleaned.text = "Items Cleaned: " + PlayerPrefs.GetFloat(currentLevelName + "i").ToString();
     }
 
     public void Next()
     {
-        string currentScene = SceneManager.GetActiveScene().name;
-        string[] levelNumber = currentScene.Split("_");
-        string level = "Level_"+levelNumber[1];
-        if (SceneManager.GetSceneByName(level).IsValid())
-        {
-            SceneManager.LoadScene(level);
-        }
-        else
-            SceneManager.LoadScene("MainMenu");
+        string[] levelNumber = currentLevelName.Split("_");
+        int next = int.Parse(levelNumber[1]) + 1;
+        string level = "Level_"+ next.ToString();
+        
+        SceneManager.LoadScene(level);
+        SceneManager.LoadScene("MainMenu");
     }
 }
