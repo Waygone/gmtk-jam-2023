@@ -15,6 +15,11 @@ public class PlayerController : MonoBehaviour
 
     public TextMeshProUGUI toggleMusicText;
 
+    public AudioSource deathSound;
+    public AudioSource walkingSound;
+    public AudioSource cleaningSound;
+    public AudioSource finishedCleaningSound;
+
     public GameObject allObjectsInScene;
     public AudioSource levelMusic;
     public AudioSource headphonesMusic;
@@ -74,6 +79,9 @@ public class PlayerController : MonoBehaviour
         cleanedText.text = "Cleaned: 0/" + itemsToClean.ToString();
 
         headphonesMusic.mute = true;
+        cleaningSound.mute = true;
+        walkingSound.mute = true;
+        
     }
 
 
@@ -108,8 +116,14 @@ public class PlayerController : MonoBehaviour
         if (horizontal != 0)
         {
             spriteRenderer.flipX = horizontal < 0;
-            Debug.Log(spriteRenderer.flipX);
+            walkingSound.mute = false;
         }
+        else if (vertical != 0)
+        {
+            walkingSound.mute = false;
+        }
+        else
+            walkingSound.mute = true;
     }
 
     #region Timers
@@ -134,7 +148,7 @@ public class PlayerController : MonoBehaviour
 
     public void ChangeCanClean(bool c, GameObject tc, float amount)
     {
-        canClean = c;
+        canClean = c;   
         toClean = tc;
         amountAddedToText = amount;
     }
@@ -142,9 +156,13 @@ public class PlayerController : MonoBehaviour
     {
         if (startCleanTimer)
         {
+            cleaningSound.mute = false;
             cleanTimer -= Time.deltaTime;
             if (cleanTimer <= 0.0f)
             {
+                cleaningSound.mute = true;
+                finishedCleaningSound.Play();
+
                 startCleanTimer = false;
                 toClean.GetComponent<Garbage>().Clean();
                 cleanTimer = cleanSpeed;
@@ -213,6 +231,7 @@ public class PlayerController : MonoBehaviour
 
     public void Die()
     {
+        deathSound.Play();
         SceneManager.LoadScene("GameOver");
     }
 }

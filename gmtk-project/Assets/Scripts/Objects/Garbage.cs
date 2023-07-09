@@ -61,7 +61,7 @@ public class Garbage : MonoBehaviour
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
             isOnFloor = true;
 
-            //crashingSound.Play();
+            crashingSound.Play();
         }
     }
 
@@ -77,7 +77,7 @@ public class Garbage : MonoBehaviour
         target = player.transform.position - transform.position;
         //Debug.Log("Player: " + target);
 
-        //warningSound.Play();
+        warningSound.Play();
         rb.AddForce(target * speed, ForceMode2D.Impulse);
         //transform.Translate(playerPositionLaunch * sp);
     }
