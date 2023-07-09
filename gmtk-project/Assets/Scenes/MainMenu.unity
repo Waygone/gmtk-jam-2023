@@ -432,9 +432,9 @@ RectTransform:
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -96.164, y: 70}
-  m_SizeDelta: {x: 469.45862, y: 90.6434}
+  m_AnchorMax: {x: 0.50575817, y: 0.5}
+  m_AnchoredPosition: {x: -111.25714, y: 101}
+  m_SizeDelta: {x: 451.9562, y: 26.1558}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &344974432
 MonoBehaviour:
@@ -456,7 +456,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Art & Menu Design - farmdogs
+  m_text: 'Art & Animation - farmdogs
 
     Programming & Level Design - Waygone
 
@@ -542,7 +542,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -298.18164, y: 1.0486145, z: -294.95416, w: -8.881958}
+  m_margin: {x: -291.14825, y: 1.0486145, z: -318.39874, w: -335.47586}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1044,7 +1044,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -96.16403, y: -41.60312}
+  m_AnchoredPosition: {x: -96.16403, y: -46.575165}
   m_SizeDelta: {x: 286.3471, y: 85.5756}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &671010281
@@ -1905,7 +1905,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -96.16403, y: 43.972046}
+  m_AnchoredPosition: {x: -96.16403, y: 39}
   m_SizeDelta: {x: 184.0198, y: 85.5756}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &960944354
@@ -2115,7 +2115,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -96.16403, y: -127.18245}
+  m_AnchoredPosition: {x: -96.16403, y: -132.1545}
   m_SizeDelta: {x: 286.3471, y: 85.5756}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1134935888
@@ -2718,7 +2718,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Super Clean Title
+  m_text: Super Street Sweeper
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a17af6f1e430a5b46b231fb9a01a757c, type: 2}
   m_sharedMaterial: {fileID: 6155218637742149438, guid: a17af6f1e430a5b46b231fb9a01a757c, type: 2}
@@ -2745,8 +2745,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 95
+  m_fontSizeBase: 95
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2830,7 +2830,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -96.164, y: -245.20596}
+  m_AnchoredPosition: {x: -97, y: -253}
   m_SizeDelta: {x: 469.45862, y: 90.6434}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1660095457
@@ -2880,8 +2880,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 90
-  m_fontSizeBase: 90
+  m_fontSize: 85
+  m_fontSizeBase: 85
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
