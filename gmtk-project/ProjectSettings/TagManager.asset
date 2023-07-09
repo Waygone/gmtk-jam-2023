@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Garbage
+  - Object
+  - MainCharacter
+  - Enemy
+  - LimitBottom
   layers:
   - Default
   - TransparentFX
@@ -11,11 +16,11 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Enemies
+  - Garbage
+  - BG
+  - Objects
   - 
   - 
   - 
@@ -40,4 +45,25 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Invisible
+    uniqueID: 663769713
+    locked: 0
+  - name: BG
+    uniqueID: 3037882093
+    locked: 0
+  - name: Objects
+    uniqueID: 2106222749
+    locked: 0
+  - name: Garbage
+    uniqueID: 2009934377
+    locked: 0
+  - name: Enemies
+    uniqueID: 3711759235
+    locked: 0
+  - name: Player
+    uniqueID: 720704853
+    locked: 0
+  - name: TextPopup
+    uniqueID: 533394735
     locked: 0
