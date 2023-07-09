@@ -27,6 +27,6 @@ public class WinScreen : MonoBehaviour
         string level = "Level_"+ next.ToString();
         
         SceneManager.LoadScene(level);
-        SceneManager.LoadScene("MainMenu");
+        //SceneManager.LoadScene("MainMenu");
     }
 }
