@@ -157,6 +157,7 @@ public class PlayerController : MonoBehaviour
         if (startCleanTimer)
         {
             cleaningSound.mute = false;
+            walkingSound.mute = true;
             cleanTimer -= Time.deltaTime;
             if (cleanTimer <= 0.0f)
             {
