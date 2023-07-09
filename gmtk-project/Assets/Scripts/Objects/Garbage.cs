@@ -68,7 +68,7 @@ public class Garbage : MonoBehaviour
         }
     }
 
-    public void Launch(GameObject player, float seconds)
+    public void Launch(GameObject player)
     {
         isOnFloor = false;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
@@ -81,7 +81,7 @@ public class Garbage : MonoBehaviour
         //Debug.Log("Player: " + target);
 
         warningSound.Play();
-        rb.AddForce(target * speed, ForceMode2D.Impulse);
+        rb.AddForce(Vector2.Distance(player.transform.position,transform.position) > 5f ? (target*speed) : (target * speed*2f), ForceMode2D.Impulse);
         //transform.Translate(playerPositionLaunch * sp);
     }
 

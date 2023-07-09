@@ -149,7 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textPopupPrefab: {fileID: 2266539841463819201, guid: 78331a9a7f4dca440b6a01feadc20372, type: 3}
   amount: 100
-  speed: 0.3
+  speed: 0.6
   warningSound: {fileID: 9074066602848237385}
   crashingSound: {fileID: 9007417760181134727}
 --- !u!50 &7510540993863785392

@@ -59,7 +59,7 @@ public class Spawner : MonoBehaviour
             }
             Destroy(collision.gameObject);
             o.transform.parent = GameObject.Find("AllGarbage").transform;
-            o.GetComponent<Garbage>().Launch(player, waitTime);
+            o.GetComponent<Garbage>().Launch(player);
         }
     }
 }
