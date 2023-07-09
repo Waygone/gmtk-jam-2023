@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: 1e76999b0351d254e8f0b6a0b0cf9440
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Sanlulus
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 11afe2f3606312347bc5131f3b9cc752, type: 3}
+  - {fileID: 12800000, guid: 906c199235e6c06419e88f578e84b894, type: 3}
+  - {fileID: 12800000, guid: d0b78d4e0ee43be4ca78cc631843cbc9, type: 3}
+  - {fileID: 12800000, guid: a23dea1dd58f906468f0c0f3bcb9c6ca, type: 3}
+  - {fileID: 12800000, guid: 84d3c4e416ba99e4fb4b0c806fd1b706, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
