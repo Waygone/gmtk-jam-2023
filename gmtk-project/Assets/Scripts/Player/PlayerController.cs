@@ -207,14 +207,19 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.T))
         {
-            headphonesOn = !headphonesOn;
-            levelMusic.mute = headphonesOn;
-            headphonesMusic.mute = !headphonesOn;
-            toggleMusicText.text = headphonesOn ? "T - Headphones Off" : "T - Headphones On";
-
-            audioMixer.SetFloat("lowpassResonanceSFX", headphonesOn? 2.0f : 0f);
-            audioMixer.SetFloat("lowpassSFX", headphonesOn ? 1000.0f : 5000f);
+            PutHeadphones();
         }
+    }
+
+    void PutHeadphones()
+    {
+        headphonesOn = !headphonesOn;
+        levelMusic.mute = headphonesOn;
+        headphonesMusic.mute = !headphonesOn;
+        toggleMusicText.text = headphonesOn ? "T - Headphones Off" : "T - Headphones On";
+
+        audioMixer.SetFloat("lowpassResonanceSFX", headphonesOn ? 2.0f : 0f);
+        audioMixer.SetFloat("lowpassSFX", headphonesOn ? 1000.0f : 5000f);
     }
     void GetMovement()
     {
